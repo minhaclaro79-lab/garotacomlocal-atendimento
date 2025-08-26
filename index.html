@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana Carolina - Garota com Local em Guarulhos, SP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #ff4d94;
+      --secondary-color: #d42a7e;
+      --dark-color: #1a1a2e;
+      --light-color: #f8f9fa;
+      --text-color: #333333;
+      --text-light: #6c757d;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+      color: var(--text-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background: var(--dark-color);
+      padding: 25px 0 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+    
+    .logo {
+      max-height: 80px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+      transition: transform 0.3s ease;
+    }
+    
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    
+    .localizacao {
+      display: inline-flex;
+      align-items: center;
+      color: var(--light-color);
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 18px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+    
+    .localizacao i {
+      margin-right: 10px;
+      color: var(--primary-color);
+      font-size: 20px;
+    }
+    
+    /* Botão CTA */
+    .btn-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(212, 42, 126, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(212, 42, 126, 0.5);
+    }
+    
+    .btn i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    
+    /* Hero / Título */
+    .hero {
+      text-align: center;
+      margin: 35px 0 20px;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+      color: var(--dark-color);
+    }
+    
+    /* Galeria */
+    .galeria {
+      margin: 30px auto;
+      display: grid;
+      gap: 25px;
+      max-width: 500px;
+    }
+    
+    .galeria img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    
+    .galeria img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Info Section */
+    .info-section {
+      background: white;
+      padding: 50px 20px;
+      margin: 40px 0;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .info-card {
+      background: var(--light-color);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .info-card i {
+      font-size: 2.3rem;
+      color: var(--primary-color);
+      margin-bottom: 12px;
+    }
+    
+    .info-card h3 {
+      margin-bottom: 8px;
+      color: var(--dark-color);
+    }
+    
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark-color);
+      color: var(--light-color);
+      padding: 30px 0;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 15px 0;
+    }
+    
+    .social-links a {
+      color: var(--light-color);
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      color: var(--primary-color);
+    }
+    
+    .copyright {
+      margin-top: 10px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      
+      .galeria {
+        gap: 18px;
+        max-width: 90%;
+      }
+      
+      .btn {
+        padding: 14px 28px;
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+      
+      .info-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="https://i.imgur.com/moQlWJ8.png" alt="Garota com Local" class="logo">
+      <div class="localizacao">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Guarulhos, SP</span>
+      </div>
+      <div class="btn-container">
+        <a href="https://wa.me/5511950226865" target="_blank" class="btn">
+          <i class="fab fa-whatsapp"></i> AGENDAR HORÁRIO
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Ana Carolina, 19 anos - Safadinha em Guarulhos</h1>
+    </section>
+    
+    <div class="container">
+      <div class="galeria">
+        <img src="https://i.imgur.com/FwC97PG.jpeg" alt="Ana Carolina - Foto 1">
+        <img src="https://i.imgur.com/7dDTsmN.jpeg" alt="Ana Carolina - Foto 2">
+      </div>
+      
+      <div class="btn-container">
+        <a href="https://wa.me/5511950226865" target="_blank" class="btn">
+          <i class="fab fa-whatsapp"></i> Conversar no WhatsApp
+        </a>
+      </div>
+      
+      <section class="info-section">
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <h3>Horário Flexível</h3>
+            <p>Agende o melhor horário para sua conveniência.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-lock"></i>
+            <h3>Discrição Total</h3>
+            <p>Ambiente seguro e reservado, com total privacidade.</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-star"></i>
+            <h3>Atendimento Premium</h3>
+            <p>Experiência única e personalizada de alta qualidade.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="copyright">© <span id="year"></span> Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza o ano automaticamente no footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
